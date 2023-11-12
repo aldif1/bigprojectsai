@@ -1,0 +1,255 @@
+{
+    "intents": [{
+            "tag": "notfound",
+            "patterns": [
+                "",
+                "",
+                "",
+                "",
+                ""
+            ],
+            "responses": [
+                "Maaf tidak tahu",
+                "saya tidak tahu",
+                "kata diluar kemampuan kami",
+                "kami tidak tahu, mungkin anda bisa menanyakan mengenai seputar Titik-Titik Lokasi Jejak Rempah",
+                "mungkin anda bisa menanyakan mengenai aplikasi ini"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "salam",
+            "patterns": [
+                "Hay",
+                "Hy",
+                "Hallo",
+                "Hey",
+                "Hola",
+                "Hello",
+                "Hai",
+                "p",
+                "hai",
+                "halo",
+                "hay",
+                "hai",
+                "mikum",
+                "assamualaikaum",
+                "hi"
+            ],
+            "responses": [
+                "Halo, terima kasih sudah menyapa",
+                "Hallo, senang bertemu denganmu, ada yang bisa saya lakukan?",
+                "Hai, ada yang bisa saya bantu?"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "selamat tinggal",
+            "patterns": [
+                "Sampai jumpa",
+                "dadah",
+                "Selamat tinggal",
+                "Senang mengobrol denganmu, selamat tinggal",
+                "Sampai nanti",
+                "dah"
+            ],
+            "responses": [
+                "Sampai jumpa!",
+                "Semoga harimu menyenangkan",
+                "Bye! Segera kembali lagi."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "terima kasih",
+            "patterns": [
+                "Terima kasih",
+                "Thanks",
+                "Thank you",
+                "Itu membantu",
+                "Luar biasa, terima kasih",
+                "Terima kasih telah membantu saya",
+                "Ok, terima kasih",
+                "makasih",
+                "terimakasih",
+                "thq"
+            ],
+            "responses": [
+                "Yupp!! Senang membantu!",
+                "Yap ^-^ Setiap saat!",
+                "Dengan senang hati"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "tidak bertanya",
+            "patterns": [],
+            "responses": [
+                "Maaf, tidak dapat memahami Anda",
+                "Tolong beri saya info lebih lanjut",
+                "Tidak yakin saya mengerti"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "ok",
+            "patterns": [
+                "ok",
+                "baiklah",
+                "oke",
+                "ya"
+            ],
+            "responses": [
+                "oke",
+                "baik ^-^",
+                "baiklah ^-^"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "diet seimbang",
+            "patterns": [
+                "Apa itu diet seimbang?"
+            ],
+            "responses": [
+                "Diet seimbang adalah pola makan yang mencakup semua kelompok makanan dengan proporsi yang tepat untuk memenuhi kebutuhan gizi tubuh."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "diet rendah kalori",
+            "patterns": [
+                "Apa manfaat diet rendah kalori?",
+                "rendah kalori manfatnya apa?"
+            ],
+            "responses": [
+                "Diet rendah kalori dapat membantu menurunkan berat badan, meningkatkan kesehatan jantung, dan mengurangi risiko penyakit terkait obesitas."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "diet tinggi",
+            "patterns": [
+                "Apa perbedaan antara diet tinggi protein dan diet tinggi karbohidrat"
+            ],
+            "responses": [
+                "Diet tinggi protein fokus pada asupan protein yang lebih tinggi dan biasanya mengurangi karbohidrat, sementara diet tinggi karbohidrat lebih fokus pada karbohidrat dengan sedikit protein."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "diet kategonik",
+            "patterns": [
+                "Apa yang dimaksud dengan diet ketogenik?"
+            ],
+            "responses": [
+                " Diet ketogenik adalah diet tinggi lemak, rendah karbohidrat yang bertujuan membuat tubuh masuk ke dalam keadaan ketosis, di mana lemak digunakan sebagai sumber energi utama."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "diet vegetarian",
+            "patterns": [
+                "Apakah diet vegetarian lebih sehat"
+            ],
+            "responses": [
+                "Diet vegetarian dapat menjadi pilihan sehat jika direncanakan dengan baik, termasuk asupan cukup nutrisi seperti protein, zat besi, dan vitamin B12."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "diet buah",
+            "patterns": [
+                " Berapa banyak porsi buah dan sayuran yang harus dimakan setiap hari? "
+            ],
+            "responses": [
+                "Disarankan untuk mengonsumsi setidaknya 5 porsi buah dan sayuran setiap hari."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "diet kategonik",
+            "patterns": [
+                "Apa yang dimaksud dengan diet ketogenik?"
+            ],
+            "responses": [
+                " Diet ketogenik adalah diet tinggi lemak, rendah karbohidrat yang bertujuan membuat tubuh masuk ke dalam keadaan ketosis, di mana lemak digunakan sebagai sumber energi utama."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "diet air",
+            "patterns": [
+                "Apa pentingnya air dalam diet sehat?"
+            ],
+            "responses": [
+                "Air penting untuk menjaga hidrasi tubuh, menghilangkan racun, dan menjaga fungsi tubuh yang optimal."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "diet sarapan benar",
+            "patterns": [
+                " Apakah sarapan benar-benar penting dalam diet? "
+            ],
+            "responses": [
+                "Ya, sarapan penting karena memberikan energi awal hari dan membantu mengatur nafsu makan sepanjang hari."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "diet gula rendah",
+            "patterns": [
+                "Apakah diet yang rendah gula adalah bagian penting dari diet sehat?"
+            ],
+            "responses": [
+                "Ya, diet yang rendah gula penting untuk mengurangi risiko obesitas, diabetes, dan masalah kesehatan lainnya. Disarankan untuk membatasi asupan gula tambahan dalam makanan dan minuman."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "diet malam",
+            "patterns": [
+                "Bagaimana cara menghindari makan berlebihan saat makan malam?"
+            ],
+            "responses": [
+                "Menghindari makan berlebihan saat makan malam dapat dilakukan dengan mengatur porsi makanan, makan lebih perlahan, dan menghindari gangguan saat makan."
+            ],
+            "context": [
+                ""
+            ]
+        }
+    ]
+}

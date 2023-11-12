@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food</title>
+    <!-- Tambahkan link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Gaya tombol chatbot */
+        .chat-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            z-index: 999;
+        }
+        /* Gaya pop-up chatbot */
+        .chat-popup {
+            display: none;
+            position: fixed;
+            bottom: 80px; /* Atur jarak dari bawah agar tidak menutupi tombol chatbot */
+            right: 20px;
+            max-width: 300px;
+            z-index: 1000;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .chat-popup-header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .chat-popup-body {
+            padding: 10px;
+        }
+
+        .chat-popup-input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+      <!-- Navigasi -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand"  href="#">Food</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#tips-diet">Beranda</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Makanan
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">rendah kalori</a>
+                        <a class="dropdown-item" href="#">tinggi kalori</a>
+                    </div>
+                </li>
+               
+            
+            </ul>
+        </div>
+    </div>
+</nav>
+    <!-- Header -->
+    <header style="background-image: url('/static/cara-diet-sehat.jpg'); background-size: cover; background-position: center;">
+        <div class="text-center text-white py-5">
+            <h1>Selamat datang di sumber informasi terkini mengenai berbagai jenis makanan rendah kalori dan tinggi kalori membantu Anda untuk diet demi mencapai tubuh sehat dan ideal.</h1>
+        </div>
+    </header>
+
+
+    <!-- Bagian Utama -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Makanan Rendah Kalori</h2>
+                <p>Makanan rendah kalori dapat dikonsumsi untuk menyeimbangkan jumlah kalori yang masuk ke dalam tubuh dengan jumlah kalori yang dibutuhkan oleh tubuh.</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Makanan Tinggi Kalori</h2>
+                <p>Makanan tinggi kalori adalah jenis makanan yang perlu dibatasi bagi mereka yang sedang ingin menurunkan berat badan</p>
+            </div>
+        </div>
+        <div class="row mt-5">
+           
+          
+        </div>
+    </section>
+
+    <!-- Formulir Email -->
+    <section class="bg-light py-5">
+        <div class="container text-center">
+            <h2>Daftarkan diri anda Sekarang</h2>
+            <p>Masukkan alamat email Anda di bawah ini.</p>
+            <form>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Alamat Email" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Daftar Sekarang</button>
+            </form>
+        </div>
+  
+    <!-- Footer -->
+    <footer class="text-center py-3">
+        <p>&copy; Saldif_xyz_</p>
+    </footer>
+</section>
+ <!-- Tombol Chatbot -->
+ <button class="chat-btn" id="openChat">Chatbot</button>
+
+    <!-- Pop-up Chatbot -->
+    <div class="chat-popup" id="chatPopup">
+        <div class="chat-popup-header" id="chatHeader">Chatbot</div>
+            <button id="closeButton" style="position: absolute; top: 10px; right: 10px; background-color: red; color: white; border: none; border-radius: 50%; width: 25px; height: 25px; cursor: pointer;">X</button>
+        
+        <div class="chat-popup-body pre-scrollable " style="max-height:350px" id="chatMessages" >
+            <p>Selamat datang! Ada yang bisa saya bantu?</p>
+           
+        </div>
+        <input type="text" class="chat-popup-input" id="chatInput" placeholder="Ketik pesan Anda di sini...">
+        <button class="btn btn-primary" id="sendButton" onclick="sendMessage()">Kirim</button>
+    </div>
+    <!-- Tambahkan link Bootstrap JS dan jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        var chatPopup = document.getElementById('chatPopup');
+        var openChat = document.getElementById('openChat');
+        var chatHeader = document.getElementById('chatHeader');
+        const closeButton = document.getElementById('closeButton');
+
+        openChat.addEventListener('click', function() {
+            chatPopup.style.display = 'block';
+        });
+        closeButton.addEventListener('click', function() {
+            chatPopup.style.display = 'none';
+        });
+    
+
+        // Fungsi untuk menyembunyikan pop-up chatbot
+        function hideChatPopup() {
+            chatPopup.style.display = 'none';
+        }
+
+        // Tutup pop-up ketika pengguna mengetik pesan
+      
+    </script>
+    
+    <script>
+        const chatMessages = document.getElementById('chatMessages');
+        const sendButton = document.getElementById('sendButton');
+
+        sendButton.addEventListener('click', function() {
+            sendMessage();
+        });
+
+      
+
+        function sendMessage() {
+            var userInput = document.getElementById('chatInput');
+            const message = userInput.value;
+            if (message.trim() !== '') {
+                chatMessages.innerHTML += `<p><strong>You:</strong> ${message}</p>`;
+                // Kirim pesan ke server atau backend untuk diproses di sini
+                $.ajax({
+                    type: 'GET',
+                    url: '/get?msg='+message,
+                    success: function(response) {
+                        chatMessages.innerHTML += `<p><strong>Chatbot:</strong> ${response}</p>`;
+                    }
+                });
+                userInput.value = '';
+            }
+        }
+    </script>
+</body>
+</html>

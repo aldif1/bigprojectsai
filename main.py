@@ -9,7 +9,6 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy import Integer, String
 from sqlalchemy.orm import Mapped, mapped_column
-import pymysql.cursors
 nltk.download('punkt')
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
@@ -31,7 +30,7 @@ class Base(DeclarativeBase):
 db = SQLAlchemy(model_class=Base)
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://LENOVO:123@192.168.56.116:3306/rendah_kalori_tinggi_kalori"
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root@127.0.0.1:3306/rendah_kalori_tinggi_kalori"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # initialize the app with the extension
@@ -206,4 +205,4 @@ def delete_user(id):
 #http://127.0.0.1:5000/users
 
 if __name__ == '__main__':
-    app.run(ssl_context='adhoc',host="0.0.0.0",debug=True, port=5000)
+    app.run(host="0.0.0.0",debug=True, port=5000)

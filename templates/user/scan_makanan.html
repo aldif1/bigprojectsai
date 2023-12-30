@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Scan makanan{% endblock %}
+
+{% block content %}
+    
+<div class="container">
+    <h1 class="mt-5">Upload Gambar</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data" class="mt-3">
+        <div class="form-group">
+            <input type="file" name="file" class="form-control-file">
+        </div>
+        <button type="submit" class="btn btn-primary">Unggah</button>
+    </form>
+</div>
+{% endblock %}

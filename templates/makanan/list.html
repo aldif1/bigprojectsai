@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daftar Pengguna</title>
+</head>
+<body>
+    <h1>Daftar Pengguna</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>Kalori</th>
+                <th>bahan</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for makanan in makanan %}
+                <tr>
+                    <td>{{makanan.id}}</td>
+                    <td>{{ makanan.name }}</td>
+                    <td>{{ makanan.kalori }}</td>
+                    <td>{{ makanan.bahan }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
